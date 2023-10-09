@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Your Website - Header</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="new logo (2).jpeg"> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+              
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contacts.html">contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="user-profile">
+        <img src="pic.jpeg" >
+    </div>
+    <!-- Rest of your webpage content goes here -->
+    <main>
+        <!-- Section for company ads -->
+        <section class="company-ads">
+            <h2>Our Company Ads</h2>
+            <div class="ad">
+                <img src="pic q (2).jpeg" >
+                <p>Learn to Code with Us!</p>
+            </div>
+            <div class="ad">
+                <img src="pic q (1).jpeg" >
+                <p>Explore Our Latest Tech Products</p>
+            </div>
+        </section>
+
+        <!-- Section for coding and computer-based services -->
+        <section class="coding-services">
+            <h2>Coding and Computer-Based Services</h2>
+            <p>We offer a wide range of services related to coding and computer technology:</p>
+            <ul>
+                <li>Web Development</li>
+                <li>Mobile App Development</li>
+                <li>Software Solutions</li>
+                <li>Data Analysis</li>
+                <li>IT Consultation</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <footer>
+            <ul>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="chats.html"><i class="fas fa-book"></i> chats</a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> Me</a></li>
+            </ul>
+        </footer>
+        
+        <script src="script.js">
+            const footer = document.querySelector('.footer');
+
+let lastScrollPosition = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScrollPosition = window.scrollY;
+
+    if (currentScrollPosition > lastScrollPosition) {
+        // User is scrolling down, hide the footer
+        footer.style.transform = 'translateY(100%)';
+    } else {
+        // User is scrolling up, show the footer
+        footer.style.transform = 'translateY(0)';
+    }
+
+    lastScrollPosition = currentScrollPosition;
+});
+
+        </script>
+</body>
+
+</html>

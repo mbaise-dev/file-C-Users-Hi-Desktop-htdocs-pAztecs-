@@ -1,0 +1,136 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<header>
+    <button onclick="window.location.href='chats.html'"><</button>
+
+    </div>
+    <div class="profile">
+        <div class="profile-pic"></div>
+        <p class="name">EMMANUEL ONYEIKE{FOUNDER}</p>
+    </div>
+    <div class="phone-icon" onclick="callRecipient('+1234567890')">
+        <i class="fa fa-phone"></i>
+    </div>
+</header>
+<style>
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-bottom: 2px solid black; /* Add a border line at the bottom */
+}
+
+.back-button {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: bLUE;
+    margin-right: 10px;
+}
+
+.name {
+    font-weight: bold;
+    margin: 0;
+}
+
+.phone-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.phone-icon i {
+    color: black;
+    
+}
+.chat-container {
+    max-width: 400px;
+    margin: 0 auto;
+
+   
+    
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sent {
+    background-color: #4CAF50;
+    color: white;
+    text-align: right;
+}
+
+.received {
+    background-color: #f1f1f1;
+    text-align: left;
+}
+
+.compose-message {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#send-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.footer {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+}
+</style>
+<script>
+function callRecipient(phoneNumber) {
+    window.location.href = `tel:${phoneNumber}`;
+}
+</script>
+<div class="chat-container">
+    <div class="message received">Hello there!</div>
+    <div class="message sent">Hi! How can I help you?</div>
+    <div class="message received">I have a question about your products.</div>
+    <!-- More messages go here -->
+</div>
+
+<footer class="footer">
+    <div class="compose-message">
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+    </div>
+</footer>

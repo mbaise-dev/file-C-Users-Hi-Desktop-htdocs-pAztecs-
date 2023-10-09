@@ -1,0 +1,39 @@
+header {
+    background-color: white;
+    color:black;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border-color: #333;
+    border-bottom: 2px solid black; /* Add a border line at the bottom */
+}
+/* Style the navigation menu */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Style navigation links on hover */
+nav a:hover {
+    text-decoration: underline;
+}
+/* Style the logo */
+.logo img {
+    width: 100px; /* Adjust the logo width as needed */
+    height: auto;
+}
+body{
+    text-align: center;
+}

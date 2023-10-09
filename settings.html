@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="settings.css">
+    <title>Settings</title>
+</head>
+<body>
+    
+        <header>
+            <div class="logo">
+                <img src="new logo (2).jpeg"> 
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Home</a></li>
+                  
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contacts.html">contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+    <main>
+        <section class="general-settings">
+            <h2>General Settings</h2>
+            <div class="setting">
+                <label for="profile-pic">Profile Picture:</label>
+                <input type="file" id="profile-pic">
+            </div>
+            <!-- Add more general settings here -->
+        </section>
+
+        <section class="appearance-settings">
+            <h2>Appearance Settings</h2>
+            <div class="setting">
+                <label for="theme">Theme:</label>
+                <select id="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+            <!-- Add more appearance settings here -->
+        </section>
+
+        <!-- Add more settings sections (e.g., notifications, privacy) -->
+
+        <button id="save-settings">Save Settings</button>
+    </main>
+    <footer>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <button id="logout">Logout</button>
+    </footer>
+    <script src="script.js">
+        // JavaScript code for handling user interactions and saving settings
+document.addEventListener("DOMContentLoaded", function () {
+    // Handle profile picture upload (you would need backend logic for this)
+    document.getElementById("profile-pic").addEventListener("change", function (event) {
+        // Handle profile picture upload logic here
+        // You would typically send the file to the server for storage
+    });
+
+    // Handle theme selection
+    document.getElementById("theme").addEventListener("change", function (event) {
+        // Handle theme change logic here (e.g., switch CSS stylesheets)
+        const selectedTheme = event.target.value;
+        // Example: Change CSS stylesheet based on the selected theme
+        document.querySelector("link[rel='stylesheet']").setAttribute("href", `${selectedTheme}-theme.css`);
+    });
+
+    // Handle saving settings (you would need backend logic for this)
+    document.getElementById("save-settings").addEventListener("click", function () {
+        // Handle saving settings logic here
+        alert("Settings saved!");
+    });
+
+    // Handle logout
+    document.getElementById("logout").addEventListener("click", function () {
+        // Handle logout logic here (e.g., redirect to the login page)
+        alert("Logged out!");
+    });
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Your Website - Header</title>
+    <link rel="stylesheet" href="chats.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="new logo (2).jpeg"> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+              
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contacts.html">contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+   
+        </div>
+        <p class="name">EMMANUEL ONYEIKE{FOUNDER}</p>
+    </div>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+     
+        </div>
+        <p class="name">GREAT EMMA-WORI{CO-FOUNDER}</p>
+    </div>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+         
+        </div>
+        <p class="name">ESTHER BARIJARSI T.{MEM 1}</p>
+    </div>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+       
+        </div>
+        <p class="name">DAVE{GRAPHICS DESIGNER 1}</p>
+    </div>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+         
+        </div>
+        <p class="name">INIOLUWA{GRAPHIC DESIGNER 2}</p>
+    </div>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+       
+        </div>
+        <p class="name">OBAH {PYTHON PROGRAMMER}</p>
+    </div>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+          
+        </div>
+        <p class="name">ODIA DAVID{DEVELOPER}</p>
+    </div>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+ 
+        </div>
+        <p class="name">ABBEY{DEVELOPER}</p>
+    </div>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+       
+        </div>
+        <p class="name">BACK-END DEVELOPER</p>
+    </div>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+           
+        </div>
+        <p class="name">FRONT END DEVELOPER</p>
+    </div> <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+      
+        </div>
+        <p class="name">BEN-DANIEL{TESTER/BRAIN}</p>
+    </div>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+ 
+        </div>
+        <p class="name">DESTINY AMADI{TESTER}</p>
+    </div>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+         
+        </div>
+        <p class="name">GRAHAM{DEVELOPER}</p>
+    </div>
+    <div class="container" onclick="redirectToChat()">
+        <div class="profile-pic">
+        
+        </div>
+        <p class="name">YAMA{DEVELOPER}</p>
+    </div>
+    <script>
+        function redirectToChat() {
+    // Replace 'chat.html' with the URL of the chat page
+    window.location.href = 'chat.html';
+    // Get all user containers by class name
+const userContainers = document.querySelectorAll('.user-container');
+
+// Add click event listeners to each user container
+userContainers.forEach(container => {
+    container.addEventListener('click', () => {
+        // Get the username associated with the clicked container
+        const username = container.getAttribute('data-username');
+
+        // Redirect to the user's chat page (replace 'chat.html' with the actual page name)
+        window.location.href = `chat.html?user=${username}`;
+    });
+});
+
+}
+
+    </script>
+    
