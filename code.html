@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="code.css">
+    <title>Enter PIN</title>
+</head>
+</head>
+<body>
+    <div class="pin-container">
+        <p class="header-text">Please enter your PIN</p>
+        <div style="display: flex; gap: 10px;">
+            <input type="text" class="pin-input" maxlength="1" placeholder="1">
+            <input type="text" class="pin-input" maxlength="1" placeholder="2">
+            <input type="text" class="pin-input" maxlength="1" placeholder="3">
+            <input type="text" class="pin-input" maxlength="1" placeholder="4">
+        </div>
+        <button class="continue-button" onclick="checkPin()">Continue</button>
+        <p class="footer-text">Don't have a PIN? <a href="register.html">Sign up here</a></p>
+    </div>
+
+    <script>
+        // Correct PIN
+        const correctPin = "1234";
+
+        function checkPin() {
+            const pinInputs = document.querySelectorAll(".pin-input");
+            let enteredPin = "";
+
+            pinInputs.forEach((input) => {
+                enteredPin += input.value;
+            });
+
+            if (enteredPin === correctPin) {
+                window.location.href = "account.html"; // Redirect to the next page
+            } else {
+                alert("Incorrect PIN. Please try again.");
+            }
+        }
+        
+    </script>
+</body>
+</html>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="account.css">
+    <title>User Profile Setup</title>
+</head>
+<body>
+    <h1>User Profile Setup</h1>
+    <form id="profile-form">
+        <label for="profile-pic">Choose Profile Picture:</label>
+        <input type="file" id="profile-pic" accept="image/*"><br><br>
+        
+        <label for="username">Username/Nickname:</label>
+        <input type="text" id="username" required><br><br>
+        
+        <button type="button" onclick="setupProfile()">Continue</button>
+    </form>
+
+    <script>
+        function setupProfile() {
+            const profilePic = document.getElementById('profile-pic').value;
+            const username = document.getElementById('username').value;
+
+            if (profilePic && username) {
+                // Save profile details (profilePic, username) to a database using a backend.
+                // Redirect to the dashboard.
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Please choose a profile picture and enter a username.');
+            }
+        }
+    </script>
+</body>
+</html>
